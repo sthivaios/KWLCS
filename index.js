@@ -1,7 +1,4 @@
-console.log("test")
-
 document.getElementById("on").onclick = function(){
-    console.log(document.getElementById("ledNum").value);
     let led = document.getElementById("ledNum").value;
     let endpoint = "https://kwlcs-api.kioydio.com/on/?id="+led
 
@@ -11,13 +8,12 @@ document.getElementById("on").onclick = function(){
     Http.open("GET", endpoint);
     Http.send();
 
-    Http.onreadystatechange=(e)=>{
-        console.log(Http.response);
-    }
+    // Http.onreadystatechange=(e)=>{
+    //     console.log(Http.response);
+    // }
 }
 
 document.getElementById("off").onclick = function(){
-    console.log(document.getElementById("ledNum").value);
     let led = document.getElementById("ledNum").value;
     let endpoint = "https://kwlcs-api.kioydio.com/off/?id="+led
 
@@ -26,13 +22,12 @@ document.getElementById("off").onclick = function(){
     Http.open("GET", endpoint);
     Http.send();
 
-    Http.onreadystatechange=(e)=>{
-        console.log(Http.response);
-    }
+    // Http.onreadystatechange=(e)=>{
+    //     console.log(Http.response);
+    // }
 }
 
 document.getElementById("allOn").onclick = function(){
-    console.log(document.getElementById("ledNum").value);
     let endpoint = "https://kwlcs-api.kioydio.com/allOn/"
 
 
@@ -40,13 +35,12 @@ document.getElementById("allOn").onclick = function(){
     Http.open("GET", endpoint);
     Http.send();
 
-    Http.onreadystatechange=(e)=>{
-        console.log(Http.response);
-    }
+    // Http.onreadystatechange=(e)=>{
+    //     console.log(Http.response);
+    // }
 }
 
 document.getElementById("allOff").onclick = function(){
-    console.log(document.getElementById("ledNum").value);
     let endpoint = "https://kwlcs-api.kioydio.com/clear/"
 
 
@@ -54,9 +48,9 @@ document.getElementById("allOff").onclick = function(){
     Http.open("GET", endpoint);
     Http.send();
 
-    Http.onreadystatechange=(e)=>{
-        console.log(Http.response);
-    }
+    // Http.onreadystatechange=(e)=>{
+    //     console.log(Http.response);
+    // }
 }
 
 document.getElementById("displayLayout").onclick = function(){
