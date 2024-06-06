@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>KWLCS</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="public/assets/icon.jpg">
+    <meta name="description" content="KWLCS : Mess with the 8 LEDs on a Greek 14 year old's desk in Greece lmfao">
+    <meta name="theme_color" content=#ffffff">
+</head>
+<body>
+
+    <div id="clockOuter">
+        UTC +3:00 <div id="clock"></div>
+    </div>
+
+    <div id="LEDS">
+        <label style="background-color: #0033ff; color: white;">2</label>
+        <label>3</label>
+        <label style="background-color: #9900f1; color: white;">4</label>
+        <label style="background-color: #ff7300; color: white;">5</label>
+        <label>6</label>
+        <label style="background-color: #0033ff; color: white;">7</label>
+        <label>8</label>
+        <label>9</label>
+    </div>
+
+    <button id="displayLayout">Display Layout</button>
+    <button id="hideLayout">Close</button>
+    <div id="buttonDiv">
+        <input placeholder="Enter the LED ID" type="number" id="ledNum">
+        <div id="onOff">
+            <button style="margin-left: 0px;" id="on">Turn On</button>
+            <button style="margin-right: 0px;" id="off">Turn Off</button>
+        </div><br>
+        <button id="allOn">Turn All On</button>
+        <button id="allOff">Turn All Off</button>
+    </div>
+
+</body>
+<script src="./index.js"></script>
+</html>
