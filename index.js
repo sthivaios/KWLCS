@@ -1,30 +1,23 @@
 document.getElementById("on").onclick = function(){
     let led = document.getElementById("ledNum").value;
-    let endpoint = "https://kwlcs-api.kioydio.com/on/?id="+led
-
-    
-
-    const Http = new XMLHttpRequest();
-    Http.open("GET", endpoint);
-    Http.send();
-
-    // Http.onreadystatechange=(e)=>{
-    //     console.log(Http.response);
-    // }
+    let numbers = led.match(/\d+/g);
+    for (let number of numbers) {
+        let endpoint = "https://kwlcs-api.kioydio.com/on/?id="+number
+        const Http = new XMLHttpRequest();
+        Http.open("GET", endpoint);
+        Http.send();
+    }
 }
 
 document.getElementById("off").onclick = function(){
     let led = document.getElementById("ledNum").value;
-    let endpoint = "https://kwlcs-api.kioydio.com/off/?id="+led
-
-
-    const Http = new XMLHttpRequest();
-    Http.open("GET", endpoint);
-    Http.send();
-
-    // Http.onreadystatechange=(e)=>{
-    //     console.log(Http.response);
-    // }
+    let numbers = led.match(/\d+/g);
+    for (let number of numbers) {
+        let endpoint = "https://kwlcs-api.kioydio.com/off/?id="+number
+        const Http = new XMLHttpRequest();
+        Http.open("GET", endpoint);
+        Http.send();
+    }
 }
 
 document.getElementById("allOn").onclick = function(){
