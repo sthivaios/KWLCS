@@ -1,3 +1,7 @@
+import { injectSpeedInsights } from '@vercel/speed-insights';
+
+injectSpeedInsights();
+
 console.log("test")
 
 document.getElementById("on").onclick = function(){
