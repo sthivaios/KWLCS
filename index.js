@@ -79,3 +79,24 @@ function checkTime(i) {
 }
 
 startTime()
+
+function getState(id) {
+    let endpoint = "https://kwlcs-api.kioydio.com/getState/?id=" + id;
+
+
+    const Http = new XMLHttpRequest();
+    Http.open("GET", endpoint);
+    Http.send();
+
+    Http.onloadend = (e) => {
+        let apiReply= Http.responseText;
+        let inputObject = JSON.parse(apiReply);
+        let value = inputObject["2"];
+        if (value == false) {
+            window.alert(`${id} is off`)
+        }
+        else if (value == true) {
+            window.alert(`${id} is on`)
+        }
+    }
+}
