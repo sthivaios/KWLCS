@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>KWLCS</title>
+    <link rel="stylesheet" href="./output.css">
+    <link rel="icon" href="icon.jpg">
+    <meta name="description" content="KWLCS : Mess with the 8 LEDs on a Greek 14 year old's desk in Greece lmfao">
+    <meta name="theme-color" content="#ffffff">
+    <script id="kwAcceptAll" data-show-once="true" src="https://cdn.jsdelivr.net/gh/accept-all/cdn/banner-2024.js" defer></script>
+</head>
+<body>
+
+<!--    <div id="clockOuter">-->
+<!--        UTC +3:00 <div id="clock"></div>-->
+<!--    </div>-->
+
+    <div id="LEDS">
+        <label style="background-color: #0033ff; color: white;">2</label>
+        <label>3</label>
+        <label style="background-color: #000000; color: white;">4 (oops)</label>
+        <label style="background-color: #ff7300; color: white;">5</label>
+        <label>6</label>
+        <label style="background-color: #0033ff; color: white;">7</label>
+        <label>8</label>
+        <label>9</label>
+    </div>
+
+    <button id="displayLayout">Display Layout</button>
+    <button id="hideLayout">Close</button>
+    <div id="buttonDiv">
+        <input placeholder="Enter the LED ID" type="text" id="ledNum">
+        <div id="onOff">
+            <button style="margin-left: 0px;" id="on">Turn On</button>
+            <button style="margin-right: 0px;" id="off">Turn Off</button>
+        </div><br>
+        <button id="allOn">Turn All On</button>
+        <button id="allOff">Turn All Off</button>
+    </div>
+
+</body>
+<script src="./index.js"></script>
+<script>
+  window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
+</script>
+<script defer src="/_vercel/speed-insights/script.js"></script>
+<script>
+  window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
+</html>

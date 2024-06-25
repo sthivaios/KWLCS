@@ -1,188 +1,143 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-#buttonDiv{
-    display: flex;
-    flex-direction: column;
-    width: 250px;
-}
-
-#buttonDiv button{
-    margin: 2.5px;
-    margin-left: 0px;
-    margin-right: 0px;
-    font-size: medium;
-    letter-spacing: 1px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#onOff{
-    display: flex;
-    flex-direction: row;
-    padding: 0px;
-}
-
-#onOff button{
-    margin: 2.5px;
-    width: 100%;
+@font-face {
+  font-family: sfPro;
+  src: url(sf_pro.ttf);
 }
 
 body{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 95vh;
-    background-color: hsl(225, 6%, 13%);
-    overflow: hidden;
+  background-color: #1c1c22;
+  color: white;
+  font-family: sfPro;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 95vh;
 }
 
-button{
-    border: 0px;
-    border-radius: 6px;
-    padding: 10px;
-    background-color: hsl(0, 0%, 100%);
-    color: black;
-    font-weight: normal;
-    transition: 0.2s;
+div{
+  opacity: 0;
+  text-align: justify;
+  width: 600px;
+  border: 1px solid rgba(108, 108, 108, 0.4);
+  padding: 50px;
+  border-radius: 10px;
+  background-color: #16161b;
+  box-shadow: 0px 0px 20px 20px #16161b;
+  overflow: hidden;
+  animation: appear 1s forwards;
+  animation-delay: 1s;
 }
 
-button:hover{
-    background-color: hsl(0, 0%, 82%);
+.thankYou{
+  opacity: 0;
+  animation: appear 1s forwards;
+  animation-delay: 4s;
+  text-align: left;
+  margin-top: 40px;
+  color: darkorange;
+  font-size: large;
+  font-weight: bold;
+  margin-bottom: 0px;
 }
 
-input{
-    text-align: left;
-    outline: 0px;
-    background-color: transparent;
-    border: 1px solid rgba(255, 255, 255, 0.14);
-    font-size: 16px;
-    color: white;
-    font-weight: bold;
-    border-radius: 5px;
-    margin-bottom: 10px;
-    padding: 10px;
-    transition: 0.15s;
-    transform: translateY(-100vh);
-    animation: flyUp 0.8s forwards;
-    animation-delay: 1s;
+.headerP{
+  font-size: x-large;
+  font-weight: bold;
 }
 
-input::placeholder{
-    text-align: left;
-    font-weight: normal;
-    color: hsl(0, 0%, 47%);
+.bold{
+  font-weight: bold;
 }
 
-input:focus{
-    border: 2px solid white;
-    box-shadow: 0px 0px 5px white;
+.awlcs{
+  color: hsl(205, 100%, 45%);
+  font-weight: bold;
+  font-size: large;
 }
 
-/*input:focus::placeholder{*/
-/*    color: transparent;*/
-/*}*/
-
-#LEDS label{
-    color: black;
-    font-family: Arial;
-    font-weight: bold;
-    margin: 2px;
-    padding: 5px;
-    border-radius: 50px;
-    background-color: white;
-    font-size: 20px;
+.awlcsHeader{
+  color: hsl(205, 100%, 45%);
+  font-weight: bold;
 }
 
-#LEDS{
-    position: fixed;
-    top: 200px;
-    opacity: 0;
-    transition: 0.4s;
+.italic{
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.7);
 }
 
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+.divider{
+  height: 0px;
+  width: 100%;
+  border: 1px dashed rgba(255, 255, 255, 0.18);
+  margin-top: 10px;
+  padding: 0px;
 }
 
-/* Firefox */
-input[type=number] {
-  -moz-appearance: textfield;
+a{
+  color: hsla(0, 0%, 84%, 0.87);
+  transition: 0.2s;
 }
 
-#clockOuter{
-    color: #919191;
-    font-family: arial;
-    font-weight: bold;
-    font-size: x-large;
-    position: fixed;
-    top: 150px;
-    display: flex;
-    flex-direction: row;
-    transform: translateY(-100vh);
-    animation: flyUp 0.8s forwards;
-    animation-delay: 0.5s;
+a:hover{
+  color: hsl(0, 0%, 100%)
 }
 
-#clock{
-    margin-left: 10px;
-    color: white;
+.text{
+  margin-top: 0px;
 }
 
-#displayLayout{
-    position: fixed;
-    top: 200px;
-    opacity: 1;
-    transition: 0.4s;
-    transform: translateY(-100vh);
-    animation: flyUp 0.8s forwards;
-    animation-delay: 0.8s;
+.anim1{
+  transform: translateY(100vh);
+  opacity: 0;
+  animation: flyUp forwards 1s;
+  animation-delay: 1s;
 }
 
-#hideLayout{
-    position: fixed;
-    top: 235px;
-    transition: 0.4s;
-    opacity: 0;
-    font-size: 14px;
-    padding-top: 3px;
-    padding-bottom: 3px;
+.anim2{
+  transform: translateY(100vh);
+  opacity: 0;
+  animation: flyUp forwards 1s;
+  animation-delay: 1.2s;
 }
 
-#off{
-    transform: translateY(-100vh);
-    animation: flyUp 0.8s forwards;
-    animation-delay: 1.4s;
+.anim3{
+  transform: translateY(100vh);
+  opacity: 0;
+  animation: flyUp forwards 1s;
+  animation-delay: 1.4s;
 }
 
-#on{
-    transform: translateY(-100vh);
-    animation: flyUp 0.8s forwards;
-    animation-delay: 1.2s;
+.anim4{
+  transform: translateY(100vh);
+  opacity: 0;
+  animation: flyUp forwards 1s;
+  animation-delay: 1.6s;
 }
 
-#allOff{
-    transform: translateY(-100vh);
-    animation: flyUp 0.8s forwards;
-    animation-delay: 1.8s;
+.animLast{
+  transform: translateY(100vh);
+  opacity: 0;
+  animation: flyUp forwards 1s;
+  animation-delay: 1.8s;
 }
 
-#allOn{
-    transform: translateY(-100vh);
-    animation: flyUp 0.8s forwards;
-    animation-delay: 1.6s;
-}
 
 @keyframes flyUp {
-    from{
-        transform: translateY(100vh);
-    }
-    to{
-        transform: translateY(0vh);
-    }
+  from{
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+  to{
+    transform: translateY(0vh);
+    opacity: 1;
+  }
+}
+
+@keyframes appear {
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
 }
